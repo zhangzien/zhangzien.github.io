@@ -1,176 +1,105 @@
-# HANUMAN Jekyll Theme
+# 星合の空
 
-[![Build Status](https://travis-ci.org/samanyougarg/hanuman.svg?branch=master)](https://travis-ci.org/samanyougarg/hanuman)
+欢迎访问我的个人主页！下面向你介绍一下我自己吧~
 
-Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
+<!-- .slide -->
 
-It is built using the open source [AMP Start framework](https://www.ampstart.com/) and can be customized as per your requirements.
+## 我的一些联系方式
 
-<a href="https://www.buymeacoffee.com/samanyougarg"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
+- Address: **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
+- Phone: **+86 18756280097**
+- Site: **<https://wu-kan.cn>**
 
-## Live Demo
-## [Hanuman](https://samanyougarg.com/hanuman)
-![Hanuman](/Screenshots/hanuman.jpg "Hanuman Preview")
+<!-- .slide vertical=true -->
 
+- E-mail:
+  - **[i@wu-kan.cn](mailto:i@wu-kan.cn)**
+  - **[wukan3@mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
+- WeChat: **Wu-\_-Kan**
+- QQ: **942759535**
 
-## Features
+<!-- .slide -->
 
-- Minimal
-- Responsive
-- Syntax Highlighting for code
-- Cover Images for homepage and blog posts
-- Social Sharing
-- Simple Navigation Menu
-- Pagination
-- Google Analytics
-- Can be easily installed via "theme gem"
-- Github Pages support
-- Easily Customisable
-- Tags
-- Multiple Authors
+## 我的一些教育情况
 
-## What is AMP
+<!-- .slide vertical=true -->
 
-AMP stands for [Accelerated Mobile Pages](https://www.ampproject.org/), a Google-backed project designed as an open standard for any publisher to have pages load quickly on mobile devices.
+School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
-## Installation
+- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021(expected)
+  - Principle of Supercomputer
+  - Parallel and Distributed Computing
+  - High Performance Computing
+  - Multicore Computing
 
-There are different ways to install the theme -
+<!-- .slide -->
 
-### 1. Cloning the repository and updating settings
-1. Fork this repository and clone the forked repository.
-2. Update the _config.yml file as per your requirements.
-3. Add your posts to the _posts directory.
-4. Deploy to Github Pages or your own server.
+## 我的一些项目成果
 
-#### Deploying to Github Pages
-**Method 1**
+<!-- .slide vertical=true -->
 
-Push the contents of the destination folder (mentioned in _config.yml. eg - destination: ../hanuman-pages/) to the gh-pages branch(if project page) or master branch(if user page) of your repository.
+- [jekyll-theme-WuK](https://jekyll-theme-WuK.wu-kan.cn/)
+  - 我的个人主页使用的主题样式，也欢迎你用于[搭建自己的页面](https://jekyll-theme-WuK.wu-kan.cn/)~[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
 
-**Method 2**
+<!-- .slide -->
 
-- Set up travis-ci for your fork.
-- Generate your secure token with the travis gem:
-  Run `gem install travis` on your terminal.
-- Grab the GH_TOKEN from https://github.com/settings/tokens
-- Then run `travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'`
-- Add the token to your .travis.yml file.
-Now you just need to push the files. Travis will generate the HTML files and automatically push them to your gh-pages branch.
-This is the setup I am using.
+## 我的一些成就
 
-### 2. Ruby Gem Method
-Add this line to your Jekyll site's `Gemfile`:
+<!-- .slide vertical=true -->
 
-```ruby
-gem "hanuman"
-```
+- **Gold Medal (Rank 4)**, [CCF Collegiate Computer Systems & Programming Contest](https://wu-kan.cn/_posts/2020-10-17-2020-CCF-CCSP%E7%AB%9E%E8%B5%9B-%E5%90%AB%E5%88%86%E8%B5%9B%E5%8C%BA%E7%AB%9E%E8%B5%9B/), South China Division, Oct. 2020
+- **First Scholarship**, Oct. 2020
+- **Silver Medal (Rank 2)**, The 8th "Intel Cup" [Parallel Application Challenge](http://sdcs.sysu.edu.cn/content/5501), Sept. 2020
+- **First Prize (Rank 3) & Winner Prize (Rank 5)**, [Priority Research Application](https://cas-pra.sugon.com/webnews/detail/205), Aug. 2020
 
-And add this line to your Jekyll site's `_config.yml`:
+<!-- .slide vertical=true -->
 
-```yaml
-theme: hanuman
-```
+- **Top 0.05% in 11395**, [The 18th CCF Certified Software Professional](https://wu-kan.cn/_posts/2019-12-16-%E7%AC%AC%E5%8D%81%E5%85%AB%E6%AC%A1CCF%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E8%83%BD%E5%8A%9B%E8%AE%A4%E8%AF%81/), Dec. 2019
+- **Silver Medal**, [ICPC Asia Regional Contest Xuzhou Site](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/), Nov. 2019
+- **Second Scholarship**, Oct. 2019
+- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2019
 
-And then execute:
+<!-- .slide vertical=true -->
 
-    $ bundle
+- **Third Scholarship**, Oct. 2018
+- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2018
 
-Or install it yourself as:
+<!-- .slide -->
 
-    $ gem install hanuman
+## 我的一些技能
 
-You'll also need to copy or create the _config.yml file just like in this repository. Similarly, you'll need to have a navigation.yml and author.yml in your _data directory.
+<!-- .slide vertical=true -->
 
-#### Deploying to Github Pages
-Run `bundle exec jekyll serve` inside your cloned repository. Push the contents of the resulting _site to your Github Pages repository.
+- **C/C++**, Familiar
+  - **OpenMP**, Familiar
+  - **MPI**, Familiar&Learning
+  - **CUDA**, Familiar&Learning
+- **Python**, Familiar
 
+<!-- .slide vertical=true -->
 
-### 3. Jekyll Remote Theme
-1. Create or update your Gemfile with the following -
+- **Markdown**, Familiar
+- **LaTex**, Familiar
+- **Linux**, Familiar&Learning
+- **Git**, Familiar
+- **VSCode**, Familiar
 
-```ruby
-source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-remote-theme"
-```
+<!-- .slide -->
 
-2. Update the bundled gems using `bundle` command.
+## 我的一些领导力
 
-3. Add `remote_theme: "hanuman"` to your `_config.yml`.
+TBD
 
-4. Add `jekyll-remote-theme` to the plugins array of your `_config.yml` -
+<!-- .slide -->
 
-```yaml
-plugins:
-  - jekyll-remote-theme
-```
+## 我的一些文字
 
-## Usage
+- [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
+- [我的算法竞赛模板](https://wu-kan.cn/_posts/2019-02-04-%E6%88%91%E7%9A%84%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E6%A8%A1%E6%9D%BF/)
+- [这一年的一点感想](https://wu-kan.cn/_posts/2019-07-18-%E8%BF%99%E4%B8%80%E5%B9%B4%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/)
 
-### _config.yml
-Update _config.yml with your respective settings like updating your site's name, description etc...
+<!-- .slide vertical=true -->
 
-### Styling
-AMP has a limitation that you can only use inline css.
-All the CSS for this theme is in the styles.scss file in the includes directory.
-
-#### Changing the Default Color
-In the styles.scss file in the includes directory, you can change the hex value of $theme-color to the color you would like your site to use.
-
-### Author Information
-Author information is present in the author.yml file in the _data folder. You can update the fields of that file as per your requirements.
-
-### Sidenav
-Sidenav can be updated from the navigation.yml file in the _data folder.
-
-## Writing Posts
-You can write posts just as you would in Jekyll, the only difference being that AMP has some strict guidelines on including external content.
-
-You cannot use Markdown format or normal HTML tags. AMP provides its own custom tags for images, videos etc...
-
-### Examples -
-
-**Images**
-`<amp-img src="welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>`
-
-**Videos**
-`<amp-youtube data-videoid="mGENRKrdoGY" layout="responsive" width="480" height="270"></amp-youtube>`
-
-[See Full AMP Documentation.](https://www.ampproject.org/docs/)
-
-### Using AMP Components
-Some AMP components require you to specify external scripts before using them.
-You can specify these scripts in the head.html file in the includes directory after the already imported scripts and then use these components in any post.
-
-## Validating your page with AMP
-AMP provides built-in validator to validate your pages so that they can rendered quickly.
-
-You can access this validator by opening the Developer Console in your browser and adding #development=1 to any url of your site.
-
-Example -
-http://localhost:4000/#development=1
-
-If you have errors on your page, AMP will list those for you in the console. If you do not have any errors, you'll get a message "AMP Validation Successful" on your console.
-
-## Enabling Google Analytics
-1. Set up your Analytics Tracking ID in _config.yml.
-2. Remove {% comment %} and {% endcomment %} tags in the default.html file in layouts directory.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/samanyougarg/hanuman. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-To submit a pull request -
-
-1. Fork/clone the repository.
-2. Develop.
-3. Create a new branch from the master branch.
-4. Open a pull request on Github describing what was fixed or added.
-
-## Thanks
-Hanuman is based on [amplify](https://github.com/ageitgey/amplify) jekyll theme. Thank You.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+- [再见，算法竞赛！](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/)
+- [Markdown 写作心得](https://wu-kan.cn/_posts/2020-01-18-Markdown%E5%86%99%E4%BD%9C%E5%BF%83%E5%BE%97/)
+- [今日此时所想之事](https://wu-kan.cn/_posts/2020-01-24-%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B/)
