@@ -1,86 +1,168 @@
-[DEMO](https://tsjensen.github.io/fuse-core/)
+# Hydeout
 
-# Fuse Core
+Hydeout updates the original [Hyde](https://github.com/poole/hyde)
+theme for [Jekyll](http://jekyllrb.com) 3.x and 4.x and adds new functionality.
 
-**A lightweight Jekyll theme for single-page personal websites.**
+![Desktop](/_screenshots/1.png?raw=true)
+<img alt="Mobile home page" src="/_screenshots/2.png?raw=true" width="300px" />
+<img alt="Mobile post page" src="/_screenshots/3.png?raw=true" width="300px" />
 
-[![Screenshot](README.pic1.jpg)](https://tsjensen.github.io/fuse-core/)
+### Usage
 
-This [Jekyll](https://jekyllrb.com/) theme is for you if you need a personal website that simply
-summarizes the links to your social media profiles and external content.
+Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem.
+Add `gem "jekyll-theme-hydeout", "~> 3.4"` to your Gemfile and run
+`bundle install`.
 
-- *responsive* - adapts to all screen sizes
-- *mobile-friendly*
-- *lightweight* - no JavaScript (except for Google Analytics, if enabled)
-- *easy to configure* - no HTML knowledge required, just change *_config.yml* ([step-by-step guide](https://github.com/tsjensen/fuse-core/wiki/Setup-Instructions))
-- *fast* - All third party components loaded via their CDN (with
-  [subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)),
-  so most resources are already cached from visits to other websites.
-- Optional Google Analytics support, with IP anonymization and cookie consent popup
-  (optional, but these things are helpful to comply with EU data protection laws).
-  You'll need to have a Google Analytics account set up for this to work, of course.  
-  We even generate statistics on how often people click on your specific social media links, for example:  
-  ![GA Outbound Stats](README.pic2.png)
+If you're installing on Github pages, you may also have to add
+`remote_theme: fongandrew/hydeout` to your `_config.yml`. [See the Github
+instructions for more details.](https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site/)
 
+Hydeout uses pagination, so if you have an `index.md`, you'll need to swap
+it with an `index.html` that uses the `index` layout:
 
-## Performance Hint
-
-It is a good idea to increase the cache lifetime of the background image, so that public proxies and users' browsers
-do not need to download it every time. GitHub Pages does not support cache control, but if *your* web server supports
-`.htaccess` files, you may want to add one to the *images* folder like so:
-
-```ApacheConf
-# Cache the large background image for 1 year
-<IfModule mod_headers.c>
-    <Files "background.jpg">
-        Header unset ETag
-        Header set Cache-Control "public, max-age=31536000"
-    </Files>
-</IfModule>
+```
+---
+layout: index
+title: Home
+---
 ```
 
+You'll also need to add a setting to `_config.yml` telling Jekyll how many posts
+to include per page (e.g. `paginate: 5`).
 
-## License
+### Keep It Simple
 
-The *Fuse Core* theme is free to use and modify under the terms of the
-[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).
 
-## Ancestry
+Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.
 
-The visual design for this theme is heavily inspired by [Dashingcode](https://github.com/dashingcode)'s
-[front-cover](https://github.com/dashingcode/front-cover). Big thank you, it looks awesome!
+### Customization
 
-However, *Fuse Core* is a complete reimplementation, which makes it very different on the inside.
-There are many improvements big and small over front-cover, making *Fuse Core* a kind of "front-cover 2.0" or
-"front-cover Plus":
+Hydeout replaces Hyde's class-based theming with the use
+of the following SASS variables:
 
-- Complete configuration via *_config.yml*, including order of links or adding of new links.
-- Ability to show extra HTML below the links, for any crisp statement that you deem necessary to add.
-- Use of Bootstrap for responsive design. This gives us supreme browser compatibility and ease of maintenance,
-  because a myriad of problems are already handled by the folks at Bootstrap.
-- [SASS](https://sass-lang.com/) styling instead of raw CSS
-- Up-to-date libraries, especially Font Awesome&nbsp;5.
-- Support for [Google Analytics ](https://analytics.google.com/analytics/web/), including tracking of outbound links
-  (so you'll know which social media profiles people clicked on), and some legal details such as IP anonymization
-  and cookie consent popup (all optional).
-- Search engine control via configurable meta tags
-- Responsive sticky footer
+```scss
+$sidebar-bg-color: #202020 !default;
+$sidebar-fg-color: white !default;
+$sidebar-sticky: true !default;
+$layout-reverse: false !default;
+$link-color: #268bd2 !default;
+```
 
+To override these variables, create your own `assets/css/main.scss` file.
+Define your own variables, then import in Hydeout's SCSS, like so:
 
-## Credits
+```scss
+---
+# Jekyll needs front matter for SCSS files
+---
 
-This theme draws upon the following work by others:
+$sidebar-bg-color: #ac4142;
+$link-color: #ac4142;
+$sidebar-sticky: false;
+@import "hydeout";
+```
 
-- Visual appearance from the [front-cover](https://github.com/dashingcode/front-cover) theme by Dashingcode under
-  [MIT license](https://github.com/dashingcode/front-cover/blob/5fb173ed1b130a1414b8f839feea6d4e97cbd9b4/LICENSE).
-- All icons are provided by [Font Awesome](https://fontawesome.com/) under
-  [SIL OFL](https://fontawesome.com/license) license.  
-  The [star icon](https://fontawesome.com/icons/star?style=solid) used as dummy favicon is provided
-  by Font Awesome under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
-- The [background image](https://pxhere.com/en/photo/792989) is used under
-  [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) license.
-- The [Open Sans](https://fonts.google.com/specimen/Open+Sans) font by Steve Matteson is used under
-  [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license.
-- The [Bootstrap](https://getbootstrap.com/) framework is used under
-  [MIT](https://github.com/twbs/bootstrap/blob/9c469cd0e8abaac19c163622ed68b6783dfa366c/LICENSE) license.
-- The [dummy avatar image](images/avatar.svg) was generated using [TinyGraphs](http://www.tinygraphs.com/).
+See the [_variables](_sass/hydeout/_variables.scss) file for other variables
+you can override.
+
+You can see the full set of partials you can replace in the
+[`_includes`](_includes) folder, but there are a few worth noting:
+
+* `_includes/copyright.html` - Insert your own copyright here.
+
+* `_includes/custom-head.html` - Insert custom head tags (e.g. to load your
+  own stylesheets)
+
+* `_includes/custom-foot.html` - Insert custom elements at the end of the
+  body (e.g. for custom JS)
+
+* `_includes/custom-nav-links.html` - Additional nav links to insert at the
+  end of the list of links in the sidebar.
+
+  Pro-tip: The `nav`s in the sidebar are flexboxes. Use the `order` property
+  to order your links.
+
+* `_includes/custom-icon-links.html`- Additional icon links to insert at the
+  end of the icon links at the bottom of the sidebar. You can use the `order`
+  property to re-order.
+
+* `_includes/favicons.html` - Replace references to `favicon.ico` and
+  `favicon.png` with your own favicons references.
+
+* `_includes/font-includes.html` - The Abril Fatface font used for the site
+  title is loaded here. If you're overriding that font in the CSS, be sure
+  to also remove the font load reference here.
+
+### New Features
+
+* Hydeout adds a new tags page (accessible in the sidebar). Just create a
+  new page with the tags layout:
+
+  ```
+  ---
+  layout: tags
+  title: Tags
+  ---
+  ```
+
+* Hydeout adds a new "category" layout for dedicated category pages.
+  Category pages are automatically added to the sidebar. All other pages
+  must have `sidebar_link: true` in their front matter to show up in
+  the sidebar. To create a category page, use the `category` layout"
+
+  ```
+  ---
+  layout: category
+  title: My Category
+  ---
+
+  Description of "My Category"
+  ```
+
+* You can control how pages are sorted by using the `sidebar_sort_order`
+  parameter in the front matter. This works for both category and non-category
+  pages, although non-category pages will always come first. Take a look at
+  [`_includes/sidebar-nav-links.html`](./_includes/sidebar-nav-links.html) if
+  you want to customize this behavior.
+
+  ```
+  ---
+  layout: page
+  title: My page
+  sidebar_sort_order: 123
+  ---
+
+  Some content.
+  ```
+
+* A simple redirect-to-Google search is available. Just create a page with
+  the `search` layout.
+
+  ```
+  ---
+  layout: search
+  title: Google Search
+  ---
+  ```
+
+* Disqus integration is ready out of the box. Just add the following to
+  your config file:
+
+  ```yaml
+  disqus:
+    shortname: my-disqus-shortname
+  ```
+
+  If you don't want Disqus or want to use something else, override
+  `comments.html`.
+
+* For Google Analytics support, define a `google_analytics` variable with
+  your property ID in your config file.
+
+There's also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!
