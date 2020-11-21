@@ -1,105 +1,86 @@
-# 星合の空
+[DEMO](https://tsjensen.github.io/fuse-core/)
 
-欢迎访问我的个人主页！下面向你介绍一下我自己吧~
+# Fuse Core
 
-<!-- .slide -->
+**A lightweight Jekyll theme for single-page personal websites.**
 
-## 我的一些联系方式
+[![Screenshot](README.pic1.jpg)](https://tsjensen.github.io/fuse-core/)
 
-- Address: **Sun Yat-sen University - 132 Waihuan East Rd. - Guangzhou, China**
-- Phone: **+86 18756280097**
-- Site: **<https://wu-kan.cn>**
+This [Jekyll](https://jekyllrb.com/) theme is for you if you need a personal website that simply
+summarizes the links to your social media profiles and external content.
 
-<!-- .slide vertical=true -->
+- *responsive* - adapts to all screen sizes
+- *mobile-friendly*
+- *lightweight* - no JavaScript (except for Google Analytics, if enabled)
+- *easy to configure* - no HTML knowledge required, just change *_config.yml* ([step-by-step guide](https://github.com/tsjensen/fuse-core/wiki/Setup-Instructions))
+- *fast* - All third party components loaded via their CDN (with
+  [subresource integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity)),
+  so most resources are already cached from visits to other websites.
+- Optional Google Analytics support, with IP anonymization and cookie consent popup
+  (optional, but these things are helpful to comply with EU data protection laws).
+  You'll need to have a Google Analytics account set up for this to work, of course.  
+  We even generate statistics on how often people click on your specific social media links, for example:  
+  ![GA Outbound Stats](README.pic2.png)
 
-- E-mail:
-  - **[i@wu-kan.cn](mailto:i@wu-kan.cn)**
-  - **[wukan3@mail2.sysu.edu.cn](mailto:wukan3@mail2.sysu.edu.cn)**
-- WeChat: **Wu-\_-Kan**
-- QQ: **942759535**
 
-<!-- .slide -->
+## Performance Hint
 
-## 我的一些教育情况
+It is a good idea to increase the cache lifetime of the background image, so that public proxies and users' browsers
+do not need to download it every time. GitHub Pages does not support cache control, but if *your* web server supports
+`.htaccess` files, you may want to add one to the *images* folder like so:
 
-<!-- .slide vertical=true -->
+```ApacheConf
+# Cache the large background image for 1 year
+<IfModule mod_headers.c>
+    <Files "background.jpg">
+        Header unset ETag
+        Header set Cache-Control "public, max-age=31536000"
+    </Files>
+</IfModule>
+```
 
-School of Data and Computer Science, Sun Yat-sen University, Guangzhou
 
-- Bachelor of Computer Science (Supercomputer Class), Sept. 2017 - Jul. 2021(expected)
-  - Principle of Supercomputer
-  - Parallel and Distributed Computing
-  - High Performance Computing
-  - Multicore Computing
+## License
 
-<!-- .slide -->
+The *Fuse Core* theme is free to use and modify under the terms of the
+[CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
-## 我的一些项目成果
+## Ancestry
 
-<!-- .slide vertical=true -->
+The visual design for this theme is heavily inspired by [Dashingcode](https://github.com/dashingcode)'s
+[front-cover](https://github.com/dashingcode/front-cover). Big thank you, it looks awesome!
 
-- [jekyll-theme-WuK](https://jekyll-theme-WuK.wu-kan.cn/)
-  - 我的个人主页使用的主题样式，也欢迎你用于[搭建自己的页面](https://jekyll-theme-WuK.wu-kan.cn/)~[![Star](https://img.shields.io/github/stars/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io)[![Fork](https://img.shields.io/github/forks/wu-kan/wu-kan.github.io.svg)](https://github.com/wu-kan/wu-kan.github.io/fork)
+However, *Fuse Core* is a complete reimplementation, which makes it very different on the inside.
+There are many improvements big and small over front-cover, making *Fuse Core* a kind of "front-cover 2.0" or
+"front-cover Plus":
 
-<!-- .slide -->
+- Complete configuration via *_config.yml*, including order of links or adding of new links.
+- Ability to show extra HTML below the links, for any crisp statement that you deem necessary to add.
+- Use of Bootstrap for responsive design. This gives us supreme browser compatibility and ease of maintenance,
+  because a myriad of problems are already handled by the folks at Bootstrap.
+- [SASS](https://sass-lang.com/) styling instead of raw CSS
+- Up-to-date libraries, especially Font Awesome&nbsp;5.
+- Support for [Google Analytics ](https://analytics.google.com/analytics/web/), including tracking of outbound links
+  (so you'll know which social media profiles people clicked on), and some legal details such as IP anonymization
+  and cookie consent popup (all optional).
+- Search engine control via configurable meta tags
+- Responsive sticky footer
 
-## 我的一些成就
 
-<!-- .slide vertical=true -->
+## Credits
 
-- **Gold Medal (Rank 4)**, [CCF Collegiate Computer Systems & Programming Contest](https://wu-kan.cn/_posts/2020-10-17-2020-CCF-CCSP%E7%AB%9E%E8%B5%9B-%E5%90%AB%E5%88%86%E8%B5%9B%E5%8C%BA%E7%AB%9E%E8%B5%9B/), South China Division, Oct. 2020
-- **First Scholarship**, Oct. 2020
-- **Silver Medal (Rank 2)**, The 8th "Intel Cup" [Parallel Application Challenge](http://sdcs.sysu.edu.cn/content/5501), Sept. 2020
-- **First Prize (Rank 3) & Winner Prize (Rank 5)**, [Priority Research Application](https://cas-pra.sugon.com/webnews/detail/205), Aug. 2020
+This theme draws upon the following work by others:
 
-<!-- .slide vertical=true -->
-
-- **Top 0.05% in 11395**, [The 18th CCF Certified Software Professional](https://wu-kan.cn/_posts/2019-12-16-%E7%AC%AC%E5%8D%81%E5%85%AB%E6%AC%A1CCF%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E8%83%BD%E5%8A%9B%E8%AE%A4%E8%AF%81/), Dec. 2019
-- **Silver Medal**, [ICPC Asia Regional Contest Xuzhou Site](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/), Nov. 2019
-- **Second Scholarship**, Oct. 2019
-- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2019
-
-<!-- .slide vertical=true -->
-
-- **Third Scholarship**, Oct. 2018
-- **First Prize**, China Collegiate Programming Contest, Guangdong Division, May 2018
-
-<!-- .slide -->
-
-## 我的一些技能
-
-<!-- .slide vertical=true -->
-
-- **C/C++**, Familiar
-  - **OpenMP**, Familiar
-  - **MPI**, Familiar&Learning
-  - **CUDA**, Familiar&Learning
-- **Python**, Familiar
-
-<!-- .slide vertical=true -->
-
-- **Markdown**, Familiar
-- **LaTex**, Familiar
-- **Linux**, Familiar&Learning
-- **Git**, Familiar
-- **VSCode**, Familiar
-
-<!-- .slide -->
-
-## 我的一些领导力
-
-TBD
-
-<!-- .slide -->
-
-## 我的一些文字
-
-- [基于 Jekyll 搭建个人博客](https://wu-kan.cn/_posts/2019-01-18-%E5%9F%BA%E4%BA%8EJekyll%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/)
-- [我的算法竞赛模板](https://wu-kan.cn/_posts/2019-02-04-%E6%88%91%E7%9A%84%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E6%A8%A1%E6%9D%BF/)
-- [这一年的一点感想](https://wu-kan.cn/_posts/2019-07-18-%E8%BF%99%E4%B8%80%E5%B9%B4%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/)
-
-<!-- .slide vertical=true -->
-
-- [再见，算法竞赛！](https://wu-kan.cn/_posts/2019-11-04-%E5%86%8D%E8%A7%81-%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/)
-- [Markdown 写作心得](https://wu-kan.cn/_posts/2020-01-18-Markdown%E5%86%99%E4%BD%9C%E5%BF%83%E5%BE%97/)
-- [今日此时所想之事](https://wu-kan.cn/_posts/2020-01-24-%E4%BB%8A%E6%97%A5%E6%AD%A4%E6%97%B6%E6%89%80%E6%83%B3%E4%B9%8B%E4%BA%8B/)
+- Visual appearance from the [front-cover](https://github.com/dashingcode/front-cover) theme by Dashingcode under
+  [MIT license](https://github.com/dashingcode/front-cover/blob/5fb173ed1b130a1414b8f839feea6d4e97cbd9b4/LICENSE).
+- All icons are provided by [Font Awesome](https://fontawesome.com/) under
+  [SIL OFL](https://fontawesome.com/license) license.  
+  The [star icon](https://fontawesome.com/icons/star?style=solid) used as dummy favicon is provided
+  by Font Awesome under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) license.
+- The [background image](https://pxhere.com/en/photo/792989) is used under
+  [CC0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) license.
+- The [Open Sans](https://fonts.google.com/specimen/Open+Sans) font by Steve Matteson is used under
+  [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license.
+- The [Bootstrap](https://getbootstrap.com/) framework is used under
+  [MIT](https://github.com/twbs/bootstrap/blob/9c469cd0e8abaac19c163622ed68b6783dfa366c/LICENSE) license.
+- The [dummy avatar image](images/avatar.svg) was generated using [TinyGraphs](http://www.tinygraphs.com/).
